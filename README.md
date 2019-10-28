@@ -1,2 +1,1 @@
-# Shoes
- Small assingment on shoe size
+This is an assigment from school about shoe sizes and showing it in graphs
