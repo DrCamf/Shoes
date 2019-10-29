@@ -1,0 +1,132 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-gap: 1em;
+  grid: 'header' auto
+        'nav' auto
+        'main' 1fr
+        'footer' auto
+      / 1fr; 
+}
+
+@media (min-width: 40em) {
+  body {
+    grid: 'header header' auto
+          'nav main' 1fr
+          'nav footer' auto
+        / 12em 1fr;
+  }
+}
+
+header { grid-area: header; 
+}
+nav { grid-area: nav;}
+main { grid-area: main;}
+footer { grid-area: footer; }
+
+/* show… */
+body {
+  background: var(--dark-purple);
+}
+
+header,
+nav,
+main,
+footer {
+  background: var(--background);
+  padding: 1em;
+}
+
+h1 {
+  font-family: var(--zilla);
+}
+
+
+#text {
+    border: 1px solid dashed;
+    background-color: rgba(211, 216, 212, 1);
+    width: 50%;
+    padding: .5em;
+    font-size: 1.0em;
+    margin-bottom: 1em;
+    margin-top: .5em;
+    
+}
+#shoe {
+     width: 10%; 
+    background-color: rgba(211, 216, 212, 1);
+   
+    padding: .5em;
+    font-size: 1.0em;
+    margin-bottom: 1em;
+    margin-top: .5em;
+}
+input[type='text']:focus,
+
+legend {
+    font-size: 2em;
+    width:30%;
+}
+
+#shoeSize {
+  padding-left: 0.5em;
+}
+
+label {
+    font-size: 1.1em;
+    font-weight: bold;
+
+}
+
+.error {
+    color: red;
+}
+
+.info {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+
+
+
+.text_radio {
+    padding: 1em;
+}
+
+.return {
+     color: rgba(red, rgba(4, 37, 110, 0.719), blue, alpha)
+     
+}
+
+
+#submit {
+    color: white;
+    background-color:rgba(41, 39, 39, 0.719);
+    font-size: 1.2em;
+    width: 85px;
+    height: 40px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 500px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+#submit:hover {
+    
+    color:rgba(41, 39, 39, 0.719);
+}
+
+td {
+    text-align:center;
+    border-left-style: solid;
+   
+}
+
+#toppic {
+  border-radius: 50%;
+  max-width: 25%;
+}
+

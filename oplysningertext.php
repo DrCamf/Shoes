@@ -12,18 +12,25 @@ echo "<html lang='en'>
 <body>
     
 <header>
-            <h1><a href='index.html'>Header</a></h1>
+            <h1><a href='indtasttext.php'>Shoe sizes</a></h1>
         </header>
         
       <nav>  
         <ol>
-           <a href='indtasttext.php'>Indtast oplysninger</a>        
+           <a href='indtasttext.php'>Indtast oplysninger Text</a>        
         </ol>
             <ol>
-            <a href='oplysningertext.php'>Oversigt oplysninger</a>        
+            <a href='oplysningertext.php'>Oversigt oplysninger Text</a>        
         </ol>
+        <ol>
+        <a href='indtastDB.php'>Indtast oplysninger DB</a> 
+    </ol>
+    <ol>
+        <a href='oplysningerDB.php'>Oversigt oplysninger DB</a>        
+    </ol>
+    
             <ol>
-            <a href='graph.php'>Graf skostørrelse </a>        
+            <a href='graphDB.php'>Graf skostørrelse </a>        
         </ol>
         </ol>
             <ol>
