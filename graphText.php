@@ -1,50 +1,39 @@
-<?php
+<?php 
+ 
+ 
 
-include_once 'config.php';
-$shoeSize = array();
-$numberpr = array();
+
+
+        $shoeSize = array();
+        $numberpr = array();
+        $file = fopen('users.csv','r');
+        while (($row = fgetcsv($file, 0, ",")) !== FALSE) {
+          //Print out my column data.
+          $shoeSize[] = $row[3];
+          
+        }
+        fclose($file);
+        //sort($shoeSize);
+       
+        
+        
+        $numberpr = array_count_values($shoeSize);
+        //print_r($numberpr);
+       // echo "<br />";
+
+        $shoeSize = array_unique($shoeSize);
+        sort( $numberpr);
+        //print_r($numberpr);
+        sort ($shoeSize);
+        //$res2 = array_shift($numberpr);
+
+ 
 
 # ------- The graph values in the form of associative array
 //$shoeSize = array("35", "38", "39", "40", "41", "44", "45");
 //$numberpr = array(1,1,2,3,2,5,4);
 
-try {
-$sqlstr = "SELECT DISTINCT shoeSize FROM users ORDER BY shoeSize";
-$result = $conn->query($sqlstr);
 
-if ($result->num_rows > 0) {
-// output data of each row
-    while($row = $result->fetch_assoc()) {
-      $shoeSize[] =  strval($row["shoeSize"]);
-    }
-} else {
-    echo "0 results";
-}
-
-} catch(Exception $e) {
-echo 'Caught exception: ', $e->getMessage(), "\n";
-
-$conn = null;
-}
-print_r ($shoeSize);
-try{
-$sqlstr = "SELECT COUNT(*) AS 'count' FROM users GROUP BY shoeSize";
-$result = $conn->query($sqlstr);
-
-if ($result->num_rows > 0) {
-// output data of each row
-    while($row = $result->fetch_assoc()) {
-      $numberpr[] =  $row["count"];
-    }
-} else {
-    echo "0 results";
-}
-
-}catch(Exception $e) {
-echo 'Caught exception: ', $e->getMessage(), "\n";
-
-$conn = null;
-}
 
 
 $img_width=450;
@@ -96,7 +85,7 @@ imagestring($img,0,5,$y-5,$v,$bar_color);
 # ----------- Draw the bars here ------
 for($i=0;$i< $total_bars; $i++){ 
 # ------ Extract key and value pair from the current pointer position
-$key = $shoeSize[$i];
+$key =$shoeSize[$i];
 $value = $numberpr[$i];
 
 $x1= $margins + $gap + $i * ($gap+$bar_width) ;
@@ -112,4 +101,13 @@ $_REQUEST['asdfad']=234234;
 
 
 
+
 ?>
+
+
+
+       
+
+
+
+

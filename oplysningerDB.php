@@ -29,7 +29,7 @@ echo "<html lang='en'>
     </ol>
     
             <ol>
-            <a href='graphDB.php'>Graf skostørrelse </a>        
+            <a href='graphpage.php'>Graf skostørrelse </a>        
         </ol>
         </ol>
             <ol>
@@ -67,7 +67,7 @@ echo "<html lang='en'>
 echo " </main> 
        
 <footer>
-<h3>Footer</h3>
+
 </footer>
 </body>
 </html> ";

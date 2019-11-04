@@ -30,7 +30,7 @@ echo "<html lang='en'>
         </ol>
     
              <ol>
-             <a href='graphDB.php'>Graf skostørrelse </a>        
+             <a href='graphpage.php'>Graf skostørrelse </a>        
          </ol>
          </ol>
              <ol>
@@ -43,7 +43,7 @@ echo "<html lang='en'>
          <div class='info'>  </div>
          <fieldset>
         <legend>Indtast oplysninger</legend>
-            <form method='post' action='indtasttext.php'>
+            <form method='post' action='indtastDB.php'>
                 <label for='name'>Name: </label><br />
                 <input id='text' type='text' name='Name' /> <span class='error'>  </span><br />
                 <label for='email'>Email: </label><br />
@@ -186,7 +186,7 @@ echo "<html lang='en'>
           echo " </main> 
         
           <footer>
-          <h3>Footer</h3>
+          
           </footer>
           </body>
           </html> ";

@@ -30,7 +30,7 @@
         </ol>
     
              <ol>
-             <a href='graphDB.php'>Graf skostørrelse </a>        
+             <a href='graphpage.php'>Graf skostørrelse </a>       
          </ol>
          </ol>
              <ol>
@@ -103,13 +103,18 @@
          }
          if (!empty($_POST['Name']) && !empty($_POST['Email']) && !empty($_POST['Age']) && !empty($_POST['shoeSize'])) {
             /* if (((preg_match('/[A-Za-z. ]/' , $name) === true) && (preg_match('/[A-Za-z0-9._-]{3,}@[A-Za-z0-9._-]{3,}[.]{1}[A-Za-z0-9._-]{2,}/' , $email) === true) && (is_numeric($_POST['Age'])) && (is_numeric($_POST['shoeSize']))){*/
-             $file = 'users.csv';
+             //$file = 'users.csv';
+             $fp = fopen("users.csv", 'a');
            // The new person to add to the file
-           $value = $name . "," . $age . "," . $email . "," . $size;
+           //$value = "\n $name ,  $age ,  $email , $size ";
+           
+           
+           fputcsv($fp, array($name,$age,$email,$size ));
            // Write the contents to the file, 
            // using the FILE_APPEND flag to append the content to the end of the file
            // and the LOCK_EX flag to prevent anyone else writing to the file at the same time
-           file_put_contents($file, $value, FILE_APPEND | LOCK_EX);
+           ///file_put_contents($file, $value, FILE_APPEND | LOCK_EX);
+           fclose($fp);
            echo "User has been submitted";
          }
              
@@ -187,7 +192,7 @@
  echo " </main> 
         
  <footer>
- <h3>Footer</h3>
+ 
  </footer>
  </body>
  </html> ";

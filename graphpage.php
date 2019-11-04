@@ -46,7 +46,7 @@ echo "<html lang='en'>
 
 
 
-               <img src='graphText.php' alt='nej virker ikke' />
+               <img src='graphDB.php' alt='nej virker ikke' />
 
        </main>
         </body>
