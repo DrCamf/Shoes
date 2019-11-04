@@ -34,7 +34,7 @@
          </ol>
          </ol>
              <ol>
-             <a href='test.php'>test </a>        
+             <a href='test.php'>Graph fra csv </a>        
          </ol>
          </nav>
           

@@ -22,7 +22,8 @@
        // echo "<br />";
 
         $shoeSize = array_unique($shoeSize);
-        sort( $numberpr);
+        ksort( $numberpr);
+        $numberpr = array_values($numberpr);
         //print_r($numberpr);
         sort ($shoeSize);
         //$res2 = array_shift($numberpr);

@@ -16,10 +16,10 @@ echo "<html lang='en'>
         
       <nav>  
         <ol>
-           <a href='indtasttext.php'>Indtast oplysninger</a>        
+           <a href='indtasttext.php'>Indtast oplysninger Text</a>        
         </ol>
             <ol>
-            <a href='oplysningertext.php'>Oversigt oplysninger</a>        
+            <a href='oplysningertext.php'>Oversigt oplysninger Text</a>        
         </ol>
         <ol>
         <a href='indtastDB.php'>Indtast oplysninger DB</a> 
@@ -33,7 +33,7 @@ echo "<html lang='en'>
         </ol>
         </ol>
             <ol>
-            <a href='test.php'>test </a>        
+            <a href='test.php'>Graph fra csv </a>       
         </ol>
         </nav>
          
